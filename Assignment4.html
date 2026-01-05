@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>HTML Links – Practice Playground</title>
+
+<style>
+    body {
+        font-family: 'Poppins', sans-serif;
+        background: linear-gradient(135deg, #1e3c72, #2a5298, #4e73df);
+        margin: 0;
+        padding: 20px;
+        color: white;
+    }
+
+    .container {
+        max-width: 900px;
+        margin: auto;
+        background: rgba(255, 255, 255, 0.15);
+        padding: 25px;
+        border-radius: 15px;
+        backdrop-filter: blur(6px);
+    }
+
+    h1 {
+        text-align: center;
+        font-size: 2.3rem;
+        margin-bottom: 15px;
+        color: #ffebcd;
+    }
+
+    h2 {
+        margin-top: 30px;
+        color: #ffe9f7;
+    }
+
+    a {
+        color: #ffdd57;
+        text-decoration: none;
+        font-weight: 600;
+    }
+
+    a:hover {
+        color: #fff;
+        text-decoration: underline;
+    }
+
+    .example-box, .task-input {
+        background: rgba(0,0,0,0.2);
+        padding: 20px;
+        border-radius: 12px;
+        margin-bottom: 20px;
+    }
+
+    .task-title {
+        margin-bottom: 10px;
+        font-size: 1.3rem;
+        color: #fff9c4;
+    }
+
+    .placeholder {
+        background: rgba(255,255,255,0.2);
+        color: #ffefef;
+        padding: 8px 12px;
+        border-radius: 6px;
+        margin-top: 10px;
+        font-size: 0.9rem;
+        font-style: italic;
+    }
+
+</style>
+</head>
+<body>
+
+<div class="container">
+
+    <h1>HTML LINKS — Practice Playground 🔗</h1>
+
+    <h2>🔵 Basic Link</h2>
+    <div class="example-box">
+        <a href="https://google.com" target="_blank">Visit Google</a>
+
+    </div>
+
+    <h2>🟣 Open Link in New Tab</h2>
+    <div class="example-box">
+        <a href="https://www.skillcaptain.com" target="_blank">SkillCaptain (New Tab)</a>
+    </div>
+
+    <h2>🟢 Email Link</h2>
+    <div class="example-box">
+        <a href="mailto:example@gmail.com">Send an Email</a>
+    </div>
+
+    <h2>🟠 Phone Call Link</h2>
+    <div class="example-box">
+        <a href="tel:+919999999999">Call Support</a>
+    </div>
+
+    <h2>🔴 Jump to a Section on Same Page</h2>
+    <div class="example-box">
+        <a href="#bottom">Go to Bottom Section</a>
+    </div>
+
+    <h2>🧩 Your Tasks (Complete Below)</h2>
+
+    <div class="task-input">
+        <div class="task-title">Task 1: Create a Link to Google (opens in new tab)</div>
+        <a href="https://google.com" target="_blank">Visit Google</a>
+    </div>
+
+    <div class="task-input">
+        <div class="task-title">Task 2: Create an Internal Link to about.html</div>
+        <a href="about.html">Go to About Page</a>
+    </div>
+
+    <div class="task-input">
+        <div class="task-title">Task 3: Create Your Own Email Link (mailto)</div>
+        <a href="mailto:example@gmail.com">Email Me</a>
+
+    </div>
+
+    <div class="task-input">
+        <div class="task-title">Task 4: Create a Button-style Link (Use inline CSS!)</div>
+        <a href="#" style="background:#E5608E; padding:8px 14px; border-radius:6px; color:white; text-decoration:none;">Click Me</a>
+
+    </div>
+
+    <div class="task-input">
+        <div class="task-title">Task 5: Create a Jump Link to Contact Section</div>
+        <a href="#contact">Go to Contact Section</a>
+
+    </div>
+
+    <h2 id="bottom" style="margin-top:40px;">📌 Bottom Section</h2>
+    <p>This is the bottom of the page that links will jump to.</p>
+
+    <h2 id="contact" style="margin-top:40px;">Contact Section</h2>
+    <p>This is the contact section of the page.</p>
+
+
+</div>
+
+</body>
+</html>
