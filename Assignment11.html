@@ -43,6 +43,41 @@
         text-decoration: none;
         margin-right: 10px;
     }
+
+    label {
+        display: block;
+        margin-top: 10px;
+        font-size: 16px;
+    }
+
+    input, select, button {
+        display: block;
+        width: 100%;
+        margin-top: 5px;
+        padding: 8px;
+        font-size: 16px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+    }
+
+    .days label {
+        display: inline-block;
+        margin-right: 15px;
+    }
+
+    button {
+        margin-top: 15px;
+        padding: 10px;
+        background: #E5608E;
+        border: none;
+        color: white;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    button:hover {
+        background: #D63A7C;
+    }
 </style>
 </head>
 
@@ -52,18 +87,15 @@
 
 <div class="box">
 
-    <!-- HEADER -->
     <header>
         <h2>My Webpage Header</h2>
         <p>This is the header area.</p>
     </header>
 
-    <!-- NAVIGATION -->
     <nav>
         <p>Navigation Menu: Home | About | Contact</p>
     </nav>
 
-    <!-- MAIN CONTENT -->
     <main>
 
         <section>
@@ -71,54 +103,58 @@
             <p>This is a semantic section of the webpage.</p>
         </section>
 
-        <article>
-            <h3>Sample Article</h3>
-            <p>This is an article describing a topic.</p>
-        </article>
-
+        <!-- REGISTRATION FORM -->
         <section>
-            <h3>Services</h3>
-            <p>We offer professional digital solutions.</p>
+            <h3>Course Registration</h3>
 
-            <article>
-                <h4>Web Development Service</h4>
-                <p>
-                    We build fast, responsive, and user-friendly websites
-                    using modern web technologies.
-                </p>
-            </article>
+            <form>
+
+                <!-- EMAIL FIELD -->
+                <label for="email">Email</label>
+                <input type="email" id="email" required placeholder="Enter Email">
+
+                <!-- PHONE FIELD -->
+                <label for="phone">Phone</label>
+                <input type="text" id="phone" pattern="[0-9]{10}" placeholder="10-digit Phone">
+
+                <!-- AGE FIELD -->
+                <label for="age">Age</label>
+                <input type="number" id="age" min="18" max="60" placeholder="Age 18-60">
+
+                <!-- DROPDOWN -->
+                <label for="course">Choose Course</label>
+                <select id="course" required>
+                    <option value="">-- Choose Course --</option>
+                    <option>HTML</option>
+                    <option>CSS</option>
+                    <option>JavaScript</option>
+                </select>
+
+                <!-- CHECKBOXES -->
+                <label>Select Available Days</label>
+                <div class="days">
+                    <label><input type="checkbox" name="day" value="Monday"> Monday</label>
+                    <label><input type="checkbox" name="day" value="Friday"> Friday</label>
+                    <label><input type="checkbox" name="day" value="Sunday"> Sunday</label>
+                </div>
+
+                <button type="submit">Register</button>
+
+                <p class="hint">Powered by HTML<sup>5</sup> magic!</p>
+
+
+            </form>
         </section>
-
-        <section>
-            <h3>Portfolio</h3>
-            <p>Check out our latest projects and creative works.</p>
-        </section>
-
     </main>
 
-    <!-- ASIDE -->
     <aside>
         <h3>Note</h3>
-        <p>
-            💡 Tip: Semantic HTML improves accessibility, SEO,
-            and code readability.
-        </p>
+        <p>💡 Form now has email, phone, age, course dropdown, and days checkboxes with validation.</p>
     </aside>
 
-    <!-- FOOTER (IMPROVED) -->
     <footer>
         <p><strong>Contact:</strong> support@mywebsite.com</p>
-
-        <p>
-            <strong>Follow us:</strong>
-            <a href="#">Instagram</a>
-            <a href="#">LinkedIn</a>
-            <a href="#">GitHub</a>
-        </p>
-
-        <p>
-            © 2025 My Website, Pune, India
-        </p>
+        <p>© 2025 My Website, Pune, India</p>
     </footer>
 
 </div>
