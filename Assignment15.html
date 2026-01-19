@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Portfolio</title>
+  <style>
+    /* General Styles */
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(135deg, #1e1e2f, #2a2a40);
+      color: #fff;
+      line-height: 1.6;
+    }
+
+    a {
+      color: #ffcc70;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    a:hover, a:focus {
+      color: #ffb84d;
+      outline: 3px solid #ffcc70;
+      outline-offset: 2px;
+    }
+
+    h1, h2 {
+      margin: 0.5em 0;
+    }
+
+    /* Header */
+    header {
+      background: #1a1a2e;
+      padding: 20px 0;
+      text-align: center;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+    }
+
+    header h1 {
+      font-size: 2rem;
+      color: #ffcc70;
+    }
+
+    nav a {
+      margin: 0 15px;
+      font-weight: 600;
+    }
+
+    /* Sections */
+    section {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 20px;
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    }
+
+    section h2 {
+      color: #ffcc70;
+      margin-bottom: 15px;
+      border-bottom: 2px solid #ffcc70;
+      display: inline-block;
+      padding-bottom: 5px;
+    }
+
+    /* About Me */
+    #about img {
+      display: block;
+      margin-top: 15px;
+      border-radius: 50%;
+      border: 3px solid #ffcc70;
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+    }
+
+    /* Skills */
+    #skills ul {
+      list-style-type: square;
+      padding-left: 20px;
+    }
+
+    #skills li {
+      margin-bottom: 8px;
+    }
+
+    /* Projects Table */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 15px;
+    }
+
+    th, td {
+      padding: 10px;
+      text-align: left;
+      border-bottom: 1px solid #ffcc70;
+    }
+
+    th {
+      background: rgba(255, 204, 112, 0.2);
+    }
+
+    /* Contact Form */
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    label {
+      margin-bottom: 10px;
+      font-weight: 600;
+    }
+
+    input, textarea {
+      padding: 10px;
+      border-radius: 8px;
+      border: none;
+      margin-top: 5px;
+      width: 100%;
+      resize: vertical;
+    }
+
+    textarea {
+      min-height: 100px;
+    }
+
+    button {
+      margin-top: 15px;
+      padding: 12px;
+      border-radius: 8px;
+      border: none;
+      background: #ffcc70;
+      color: #1a1a2e;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background: #ffb84d;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 20px 0;
+      background: #1a1a2e;
+      color: #ffcc70;
+      margin-top: 40px;
+      box-shadow: 0 -4px 6px rgba(0,0,0,0.3);
+    }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+      nav a {
+        display: block;
+        margin: 5px 0;
+      }
+
+      section {
+        margin: 20px 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Your Name</h1>
+  <nav role="navigation" aria-label="Main Navigation">
+    <a href="#about">About</a> |
+    <a href="#skills">Skills</a> |
+    <a href="#projects">Projects</a> |
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<section id="about">
+  <h2>About Me</h2>
+  <p>Hello! I am a beginner web developer passionate about creating interactive and responsive websites.</p>
+  <img src="profile.jpg" alt="Profile picture of [Your Name]">
+</section>
+
+<section id="skills">
+  <h2>Skills</h2>
+  <ul>
+    <li>HTML & CSS &amp; Semantic Markup</li>
+    <li>JavaScript &amp; DOM Manipulation</li>
+    <li>Problem Solving &amp; Algorithms</li>
+    <li>Responsive &amp; Mobile-First Design</li>
+  </ul>
+</section>
+
+<section id="projects">
+  <h2>Projects</h2>
+  <table>
+    <tr>
+      <th>Project Name</th>
+      <th>Description</th>
+      <th>Link</th>
+    </tr>
+    <tr>
+      <td>Portfolio Website</td>
+      <td>My personal webpage showcasing projects</td>
+      <td><a href="#" target="_blank">View</a></td>
+    </tr>
+    <tr>
+      <td>Todo App</td>
+      <td>A simple task management app built with JS</td>
+      <td><a href="#" target="_blank">View</a></td>
+    </tr>
+  </table>
+</section>
+
+<section id="contact">
+  <h2>Contact Me</h2>
+  <form aria-label="Contact Form">
+    <label for="name">Name:
+      <input type="text" id="name" name="name" required aria-required="true">
+    </label>
+    <label for="email">Email:
+      <input type="email" id="email" name="email" required aria-required="true">
+    </label>
+    <label for="message">Message:
+      <textarea id="message" name="message" placeholder="Write your message here"></textarea>
+    </label>
+    <button type="submit" aria-label="Send contact message">Send</button>
+  </form>
+</section>
+
+<footer>
+  <p>© 2025 Your Name | <a href="mailto:your@email.com">your@email.com</a></p>
+</footer>
+
+</body>
+</html>
