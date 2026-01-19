@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Responsive Landing Page</title>
+
+    <!-- Fix #1: Viewport Meta Tag -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            margin: 0;
+            font-family: sans-serif;
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 400px;
+            background: #6d28d9;
+            color: white;
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        /* Features Section */
+        .features {
+            display: flex;
+            gap: 40px;
+            padding: 40px;
+            flex-wrap: wrap; /* Fix #3: allow wrapping */
+            justify-content: center;
+        }
+
+        /* Cards */
+        .card {
+            flex: 1 1 250px; /* Fix #2: flexible width */
+            max-width: 300px; /* Optional: prevent overly wide cards on desktop */
+            min-width: 200px; /* Optional: prevent too small on narrow screens */
+            height: 200px;
+            background: #f4f4f4;
+            padding: 20px;
+            border-radius: 8px;
+            box-sizing: border-box;
+            text-align: center;
+        }
+
+        /* Fix #4: Adjust padding for smaller screens */
+        @media (max-width: 768px) {
+            .hero {
+                padding: 20px;
+                height: auto;
+            }
+
+            .features {
+                padding: 20px;
+                gap: 20px;
+                flex-direction: column; /* stack cards vertically */
+            }
+
+            .card {
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="hero">
+    <h1>Super App</h1>
+    <p>Make your life easier.</p>
+</div>
+
+<div class="features">
+    <div class="card">Feature A</div>
+    <div class="card">Feature B</div>
+    <div class="card">Feature C</div>
+</div>
+
+</body>
+</html>
