@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Accessibility in HTML – Practice Playground</title>
+
+<style>
+    body {
+        font-family: 'Poppins', sans-serif;
+        background: linear-gradient(135deg, #1e1e2f, #2a2a40);
+        color: #fff;
+        padding: 20px;
+    }
+
+    h1 {
+        text-align: center;
+        color: #ffcc70;
+    }
+
+    .card {
+        background: rgba(255, 255, 255, 0.1);
+        padding: 20px;
+        border-radius: 12px;
+        margin-top: 20px;
+    }
+
+    label {
+        display: block;
+        margin-top: 10px;
+        font-weight: 600;
+    }
+
+    input, button, select, textarea {
+        margin-top: 8px;
+        padding: 10px;
+        width: 100%;
+        border-radius: 8px;
+        border: none;
+        font-size: 16px;
+    }
+
+    button {
+        background: #ffcc70;
+        cursor: pointer;
+        font-weight: bold;
+    }
+
+    button:hover {
+        background: #ffb84d;
+    }
+
+    .demo-box {
+        background: #33334d;
+        padding: 15px;
+        border-radius: 8px;
+        margin-top: 10px;
+    }
+
+    nav a:focus {
+        outline: 3px solid #ffcc70;
+        outline-offset: 2px;
+    }
+
+    h2 {
+        color: #ffcc70;
+    }
+
+    article h3 {
+        color: #ffcc70;
+    }
+
+    .alert-box {
+        background: #ff4d4d;
+        color: #fff;
+        padding: 10px;
+        border-radius: 8px;
+        margin-top: 10px;
+    }
+</style>
+</head>
+
+<body>
+
+<h1>Accessibility in HTML</h1>
+
+<!-- Task 1: Accessible Images -->
+<div class="card">
+    <h2>Task 1 – Accessible Images</h2>
+    <div class="demo-box">
+        <img src="https://via.placeholder.com/150" 
+             alt="Illustration of a sample infographic showing website analytics">
+        <img src="https://via.placeholder.com/100x50" 
+             alt="" aria-hidden="true">
+        <img src="https://via.placeholder.com/120" 
+             alt="Profile picture placeholder showing a generic avatar icon">
+    </div>
+</div>
+
+<!-- Task 2: Accessible Form -->
+<div class="card">
+    <h2>Task 2 – Accessible Form</h2>
+    <form aria-label="Registration Form">
+        <label for="name">Full Name:</label>
+        <input type="text" id="name" aria-required="true" placeholder="Enter your full name">
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" aria-required="true" placeholder="Enter your email">
+
+        <label for="age">Age (18-60):</label>
+        <input type="number" id="age" min="18" max="60" placeholder="Enter your age">
+
+        <button type="submit" aria-label="Submit registration form">Submit</button>
+    </form>
+</div>
+
+<!-- Task 3 & 4: Keyboard Navigation & ARIA -->
+<div class="card">
+    <h2>Task 3 & 4 – Navigation with ARIA</h2>
+    <nav role="navigation" aria-label="Main Navigation">
+        <a href="#" tabindex="0">Home</a> |
+        <a href="#" tabindex="0">About</a> |
+        <a href="#" tabindex="0">Services</a> |
+        <a href="#" tabindex="0">Contact</a>
+    </nav>
+
+    <div class="alert-box" role="alert">
+        This is an important alert for users (ARIA alert example)
+    </div>
+</div>
+
+<!-- Task 5: Proper Heading Structure -->
+<div class="card">
+    <h2>Task 5 – Heading Structure Example</h2>
+    <article>
+        <h1>Understanding Semantic HTML</h1>
+        <h2>Importance of Accessibility</h2>
+        <h3>Screen Readers</h3>
+        <p>Using proper headings helps screen reader users navigate the page easily.</p>
+        <h3>Keyboard Navigation</h3>
+        <p>Logical heading order and focusable elements make tab navigation smooth.</p>
+    </article>
+</div>
+
+<!-- Task 6: Accessible Button -->
+<div class="card">
+    <h2>Task 6 – Button Accessibility</h2>
+    <button aria-label="Open menu for site navigation">Open Menu</button>
+</div>
+
+</body>
+</html>
