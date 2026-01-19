@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>XML vs HTML – Practice Playground</title>
+<style>
+    body {
+        font-family: 'Poppins', sans-serif;
+        background: linear-gradient(135deg, #1e1e2f, #2a2a40);
+        color: #fff;
+        padding: 20px;
+    }
+
+    h1 {
+        text-align: center;
+        color: #ffcc70;
+    }
+
+    .card {
+        background: rgba(255, 255, 255, 0.1);
+        padding: 20px;
+        border-radius: 12px;
+        margin-top: 20px;
+    }
+
+    pre {
+        background: #33334d;
+        padding: 15px;
+        border-radius: 8px;
+        overflow-x: auto;
+    }
+
+    ul {
+        margin-top: 10px;
+        margin-left: 20px;
+    }
+</style>
+</head>
+<body>
+
+<h1>XML vs HTML Practice</h1>
+
+<!-- Task 1: Simple HTML Page -->
+<div class="card">
+    <h2>Task 1: Simple HTML Page</h2>
+    <p>Create a basic HTML page with headings, paragraphs, and a list:</p>
+    <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;&lt;title&gt;HTML Example&lt;/title&gt;&lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;HTML Example&lt;/h1&gt;
+    &lt;p&gt;This is a paragraph.&lt;/p&gt;
+    &lt;ul&gt;
+        &lt;li&gt;Item 1&lt;/li&gt;
+        &lt;li&gt;Item 2&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+    </pre>
+</div>
+
+<!-- Task 2: Simple XML Document -->
+<div class="card">
+    <h2>Task 2: Simple XML Document</h2>
+    <p>Create a custom XML document to store data about books:</p>
+    <pre>
+&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;books&gt;
+  &lt;book&gt;
+    &lt;title&gt;Book One&lt;/title&gt;
+    &lt;author&gt;Author A&lt;/author&gt;
+    &lt;year&gt;2023&lt;/year&gt;
+  &lt;/book&gt;
+&lt;/books&gt;
+    </pre>
+</div>
+
+<!-- Task 3: Compare Tag Rules -->
+<div class="card">
+    <h2>Task 3: Compare Tag Rules</h2>
+    <ul>
+        <li>HTML tags are predefined; XML tags are custom.</li>
+        <li>HTML is not case-sensitive; XML is case-sensitive.</li>
+        <li>HTML allows optional closing tags; XML requires all tags closed.</li>
+    </ul>
+</div>
+
+<!-- Task 4: Add Attributes -->
+<div class="card">
+    <h2>Task 4: Add Attributes</h2>
+    <p>Add attributes to both HTML and XML elements:</p>
+    <pre>
+&lt;img src="image.jpg" alt="Example Image"&gt; &lt;!-- HTML attribute example --&gt;
+&lt;book id="b1"&gt; ... &lt;/book&gt; &lt;!-- XML attribute example --&gt;
+    </pre>
+</div>
+
+<!-- Task 5: Validate Your XML -->
+<div class="card">
+    <h2>Task 5: Validate Your XML</h2>
+    <ul>
+        <li>All tags are properly closed.</li>
+        <li>Tag names match exactly (case-sensitive).</li>
+        <li>No overlapping tags.</li>
+    </ul>
+</div>
+
+</body>
+</html>
