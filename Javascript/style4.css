@@ -1,0 +1,27 @@
+  body {
+    font-family: 'Courier New', Courier, monospace;
+    background: linear-gradient(135deg, #1a1a2e, #16213e);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
+    min-height: 100vh;
+  }
+  h1 { color: #ffcc70; margin-bottom: 20px; text-align: center; }
+  .inventory {
+    background: #222;
+    border: 2px dashed #ffcc70;
+    border-radius: 10px;
+    width: 380px;
+    padding: 25px 20px;
+    box-shadow: 0 0 20px rgba(255,204,112,0.3);
+  }
+  .inventory-item {
+    display: flex;
+    justify-content: space-between;
+    margin: 8px 0;
+    font-size: 18px;
+  }
+  .highlight { color: #ffcc70; font-weight: bold; }
+  .note { margin-top: 15px; color: #ccc; font-size: 14px; }
